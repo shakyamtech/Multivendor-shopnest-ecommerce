@@ -1,6 +1,6 @@
 # 🛍️ Shopnest - Modern E-Commerce Platform
 
-A sleek, responsive, and modern E-Commerce web platform customized for Nepal. Features a cute Tote Bag logo, local currency (`Rs`), Nepali model photography, and built-in Firebase Authentication & Cloud Firestore database architecture.
+A sleek, responsive, and modern E-Commerce web platform customized for Nepal. Features a cute Tote Bag logo, local currency (`Rs`), high-resolution fashion imagery, and built-in Firebase Authentication & Cloud Firestore database architecture.
 
 ---
 
@@ -8,7 +8,7 @@ A sleek, responsive, and modern E-Commerce web platform customized for Nepal. Fe
 
 - 🛍️ **Custom Shopnest Branding**: Includes a cute vector Tote Bag logo (`logo.svg` & `logo.png`).
 - 🇳🇵 **Localized for Nepal**: Formatted with Nepalese currency (`Rs`) and local contact email (`info@shopnest.com`).
-- 💃 **Nepali & Mongolian Model Imagery**: High-resolution fashion photography featuring attractive Nepali & Mongolian female and male models.
+- 💃 **High-Resolution Fashion Imagery**: Stunning fashion banner sliders, product showcases, and lifestyle photography.
 - 🖼️ **Responsive Hero Slider**: 4 distinct widescreen 16:9 hero banners with top-center framing (`center top` layout to prevent head cropping).
 - 🔥 **Firebase Ready**: Pre-configured Firebase Web SDK v10 setup (`firebase-config.js`) and helper modules (`shopnest-firebase.js`) for User Auth and Firestore Database operations.
 - 🛒 **Full Shopping Workflow**: Product Catalog, Category Filtering, Wishlist, Product Comparison, Shopping Cart, and Checkout templates.
