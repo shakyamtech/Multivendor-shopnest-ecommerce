@@ -3253,6 +3253,28 @@ font-family: FontAwesome;
 	padding: 0;
 	background: #3C5B9B !important;
 }
+.social .instagram a:before {
+	content: "\f16d";
+	font-family: FontAwesome;
+}
+.social .instagram a {
+	font-size: 16px;
+	display: inline-block!important;
+	text-align: center;
+	padding: 0;
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+}
+.social .tiktok a:before {
+	content: "";
+}
+.social .tiktok a {
+	font-size: 16px;
+	display: inline-block!important;
+	text-align: center;
+	padding: 0;
+	background: #000000 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='white'%3E%3Cpath d='M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V258.4a92.16 92.16 0 1 0 58.7 86.5V0h69.17a140.39 140.39 0 0 0 13.65 60.13A141.67 141.67 0 0 0 448 109.64z'/%3E%3C/svg%3E") no-repeat center center !important;
+	background-size: 14px 14px !important;
+}
 .social .tw a:before {
 	content: "\f099";
 	font-family: FontAwesome;
