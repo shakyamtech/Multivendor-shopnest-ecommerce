@@ -1,67 +1,53 @@
-# 🛍️ Shopnest - Modern E-Commerce Platform
+# Shopnest - E-Commerce Frontend
 
-A sleek, responsive, and modern E-Commerce web platform customized for Nepal. Features a cute Tote Bag logo, local currency (`Rs`), high-resolution fashion imagery, and built-in Firebase Authentication & Cloud Firestore database architecture.
+Shopnest is a multi-vendor E-Commerce web template built with HTML5, CSS3, JavaScript, and Bootstrap. It features product listings, category filters, wishlist management, cart/checkout pages, and integration with Firebase (Auth & Firestore).
 
----
+## Live Demo
+[https://shakyamtech.github.io/Multivendor-shopnest-ecommerce/](https://shakyamtech.github.io/Multivendor-shopnest-ecommerce/)
 
-## ✨ Features
+## Project Overview
 
-- 🛍️ **Custom Shopnest Branding**: Includes a cute vector Tote Bag logo (`logo.svg` & `logo.png`).
-- 🇳🇵 **Localized for Nepal**: Formatted with Nepalese currency (`Rs`) and local contact email (`info@shopnest.com`).
-- 💃 **High-Resolution Fashion Imagery**: Stunning fashion banner sliders, product showcases, and lifestyle photography.
-- 🖼️ **Responsive Hero Slider**: 4 distinct widescreen 16:9 hero banners with top-center framing (`center top` layout to prevent head cropping).
-- 🔥 **Firebase Ready**: Pre-configured Firebase Web SDK v10 setup (`firebase-config.js`) and helper modules (`shopnest-firebase.js`) for User Auth and Firestore Database operations.
-- 🛒 **Full Shopping Workflow**: Product Catalog, Category Filtering, Wishlist, Product Comparison, Shopping Cart, and Checkout templates.
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+), Bootstrap
+- **Libraries**: Owl Carousel 2, Lightbox, RateIt, FontAwesome
+- **Backend Services**: Firebase Web SDK v10 (Auth & Cloud Firestore)
 
----
+## Pages Included
 
-## 🛠️ Tech Stack
+- `index.html` / `home.html` - Homepage with promo banners and product showcases
+- `category.html` - Product listing with sidebar filters
+- `detail.html` - Single product view with gallery & review tab
+- `shopping-cart.html` - Shopping cart summary
+- `checkout.html` - Order checkout process
+- `my-wishlist.html` - User saved wishlist items
+- `sign-in.html` - Authentication page (Firebase Auth)
+- `contact.html` - Contact form & information
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+), Bootstrap, FontAwesome
-- **Components**: OwlCarousel2, Lightbox, RateIt
-- **Backend / Database Architecture**: Firebase Auth, Cloud Firestore (Modular SDK v10)
-- **Local Server**: Python HTTP Server / Node http-server
+## Running Locally
 
----
+Clone the repository and start a static web server:
 
-## 🚀 How to Run Locally
+```bash
+git clone https://github.com/shakyamtech/Multivendor-shopnest-ecommerce.git
+cd Multivendor-shopnest-ecommerce
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/shakyamtech/Multivendor-shopnest-ecommerce.git
-   cd Multivendor-shopnest-ecommerce
-   ```
+# Using Python
+python -m http.server 5000
+```
 
-2. **Start a Local Web Server**:
-   Using Python:
-   ```bash
-   python -m http.server 8080
-   ```
-   Or using Node `http-server`:
-   ```bash
-   npx http-server -p 8080
-   ```
+Open [http://localhost:5000](http://localhost:5000) in your browser.
 
-3. **Open in Browser**:
-   Navigate to [http://localhost:8080](http://localhost:8080) to view the Shopnest application.
+## Firebase Configuration
 
----
+To use your own Firebase project for authentication and database:
 
-## 🔥 Firebase Setup
-
-To connect your own Firebase project:
 1. Open `assets/js/firebase-config.js`.
-2. Replace `firebaseConfig` credentials with your credentials from the [Firebase Console](https://console.firebase.google.com/).
-3. Start using authentication and Firestore database operations!
+2. Update the `firebaseConfig` object with your API keys from the [Firebase Console](https://console.firebase.google.com/).
 
----
+## Author
 
-## 👤 Author
+- **Mahesh Shakya** - [@shakyamtech](https://github.com/shakyamtech)
 
-- **Mahesh Shakya** ([@shakyamtech](https://github.com/shakyamtech))
+## License
 
----
+This project is open source and available under the [MIT License](LICENSE).
 
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
