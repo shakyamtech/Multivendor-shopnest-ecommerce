@@ -2729,7 +2729,13 @@ font-family: FontAwesome;
 
 }
 .icon-money:before {
-	content: "\f155";
+	content: "Rs." !important;
+	font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+	font-size: 19px !important;
+	font-weight: 800 !important;
+	color: #121212 !important;
+	display: inline-block !important;
+	margin-bottom: 2px !important;
 }
 .icon-support:before {
 	content: "\f095";
