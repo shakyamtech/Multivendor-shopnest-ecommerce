@@ -86,17 +86,18 @@
     if (isLoggedIn()) {
       var user = getUser();
 
-      // Update "Login" → "Hi, Name"
-      if (loginSpan) loginSpan.textContent = 'Hi, ' + user + ' 👤';
-      if (loginA)    { loginA.href = '#'; loginA.style.color = '#E2C48C'; loginA.style.fontWeight = '700'; }
+      // Update "Login" → "My Account" (with dropdown)
+      if (loginSpan) loginSpan.textContent = 'My Account';
+      if (loginA)    { loginA.href = '#'; loginA.style.fontWeight = '600'; }
 
-      // Build My Account dropdown
-      if (myAccLi && !document.getElementById('shopnest-acc-dropdown')) {
-        myAccLi.style.position = 'relative';
-        // Keep "My Account" text — don't replace with username (shown in Hi greeting already)
-        if (myAccA) {
-          myAccA.style.cursor = 'pointer';
-        }
+      // Hide the left-side li.myaccount to avoid duplicate
+      if (myAccLi) myAccLi.style.display = 'none';
+
+      // Build My Account dropdown on li.login
+      if (loginLi && !document.getElementById('shopnest-acc-dropdown')) {
+        loginLi.style.position = 'relative';
+        if (loginA) loginA.style.cursor = 'pointer';
+        var myAccA = loginA; // use loginA as trigger
 
         var dropdown = document.createElement('ul');
         dropdown.id = 'shopnest-acc-dropdown';
@@ -154,10 +155,10 @@
           dropdown.appendChild(li);
         });
 
-        myAccLi.appendChild(dropdown);
+        loginLi.appendChild(dropdown);
 
         // Toggle dropdown on click
-        myAccA.addEventListener('click', function (e) {
+        loginA.addEventListener('click', function (e) {
           e.preventDefault();
           var dd = document.getElementById('shopnest-acc-dropdown');
           dd.style.display = dd.style.display === 'none' ? 'block' : 'none';
@@ -165,7 +166,7 @@
 
         // Close on outside click
         document.addEventListener('click', function (e) {
-          if (!myAccLi.contains(e.target)) {
+          if (!loginLi.contains(e.target)) {
             var dd = document.getElementById('shopnest-acc-dropdown');
             if (dd) dd.style.display = 'none';
           }
@@ -173,9 +174,10 @@
       }
 
     } else {
-      // Guest — ensure Login text is correct
+      // Guest — restore Login link and show My Account
       if (loginSpan) loginSpan.textContent = 'Login';
       if (loginA)    loginA.href = 'sign-in.html';
+      if (myAccLi)   myAccLi.style.display = '';
       if (myAccSpan) myAccSpan.textContent = 'My Account';
       if (myAccA)    myAccA.href = 'sign-in.html';
 
