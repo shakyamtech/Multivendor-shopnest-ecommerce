@@ -2991,7 +2991,7 @@ font-family: FontAwesome;
   line-height: 1.7;
 }
 /* ===================================================================
-   MODERN CHITIKKA FOOTER REDESIGN
+   PERFECT CHITIKKA FOOTER BAR
    =================================================================== */
 footer.footer {
   background: linear-gradient(180deg, #111827 0%, #0B0F19 100%) !important;
@@ -3001,25 +3001,52 @@ footer.footer {
 }
 
 .copyright-bar {
-  background: #070A10 !important;
-  padding: 24px 0 !important;
+  background: #090D16 !important;
+  padding: 18px 0 !important;
   border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
+/* Flex row container */
 .copyright-bar .container {
   display: flex !important;
+  flex-direction: row !important;
   align-items: center !important;
   justify-content: space-between !important;
-  flex-wrap: wrap !important;
-  gap: 16px !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
 }
 
-.copyright-bar .social {
+/* Three equal columns */
+.copyright-bar .footer-col {
+  flex: 1 1 33.333% !important;
+  width: 33.333% !important;
+  max-width: 33.333% !important;
   display: flex !important;
   align-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  float: none !important;
 }
 
-.copyright-bar .social ul.link {
+.copyright-bar .footer-col-left {
+  justify-content: flex-start !important;
+}
+
+.copyright-bar .footer-col-center {
+  justify-content: center !important;
+  color: #CBD5E1 !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+.copyright-bar .footer-col-right {
+  justify-content: flex-end !important;
+}
+
+.copyright-bar .footer-col-left ul.link {
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
@@ -3028,11 +3055,13 @@ footer.footer {
   list-style: none !important;
 }
 
-.copyright-bar .social ul.link li {
+.copyright-bar .footer-col-left ul.link li {
+  display: inline-block !important;
   margin: 0 !important;
+  float: none !important;
 }
 
-.copyright-bar .social ul.link li a {
+.copyright-bar .footer-col-left ul.link li a {
   width: 36px !important;
   height: 36px !important;
   line-height: 36px !important;
@@ -3040,64 +3069,51 @@ footer.footer {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: all 0.3s ease !important;
 }
 
-.copyright-bar .social ul.link li a:hover {
+.copyright-bar .footer-col-left ul.link li a:hover {
   transform: translateY(-3px) scale(1.1) !important;
 }
 
-.copyright-bar .social .fb a {
+.copyright-bar .footer-col-left .fb a {
   background: #1877F2 !important;
 }
-
-.copyright-bar .social .fb a:hover {
-  box-shadow: 0 4px 14px rgba(24, 119, 242, 0.5) !important;
+.copyright-bar .footer-col-left .fb a:hover {
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.4) !important;
 }
 
-.copyright-bar .social .instagram a {
+.copyright-bar .footer-col-left .instagram a {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
 }
-
-.copyright-bar .social .instagram a:hover {
-  box-shadow: 0 4px 14px rgba(214, 36, 159, 0.5) !important;
+.copyright-bar .footer-col-left .instagram a:hover {
+  box-shadow: 0 4px 12px rgba(214, 36, 159, 0.4) !important;
 }
 
-.copyright-bar .social .tiktok a {
+.copyright-bar .footer-col-left .tiktok a {
   background: #000000 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='white'%3E%3Cpath d='M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V258.4a92.16 92.16 0 1 0 58.7 86.5V0h69.17a140.39 140.39 0 0 0 13.65 60.13A141.67 141.67 0 0 0 448 109.64z'/%3E%3C/svg%3E") no-repeat center center !important;
   background-size: 14px 14px !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
-
-.copyright-bar .social .tiktok a:hover {
+.copyright-bar .footer-col-left .tiktok a:hover {
   border-color: #FE2C55 !important;
-  box-shadow: 0 4px 14px rgba(254, 44, 85, 0.5) !important;
+  box-shadow: 0 4px 12px rgba(254, 44, 85, 0.4) !important;
 }
 
-.copyright-bar .copyright {
-  color: #CBD5E1 !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  line-height: 1.5 !important;
-  text-align: center !important;
-  letter-spacing: 0.2px !important;
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
-}
-
-.copyright-bar .copyright a {
+.copyright-bar .footer-col-center a {
   color: #38BDF8 !important;
   font-weight: 700 !important;
   text-decoration: none !important;
-  padding: 2px 6px !important;
-  margin-left: 2px !important;
+  padding: 3px 8px !important;
+  margin-left: 4px !important;
   border-radius: 4px !important;
-  background: rgba(56, 189, 248, 0.08) !important;
-  border: 1px solid rgba(56, 189, 248, 0.2) !important;
+  background: rgba(56, 189, 248, 0.12) !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
   transition: all 0.25s ease !important;
+  display: inline-block !important;
 }
 
-.copyright-bar .copyright a:hover {
+.copyright-bar .footer-col-center a:hover {
   color: #FFFFFF !important;
   background: #0284C7 !important;
   border-color: #0284C7 !important;
@@ -3108,6 +3124,8 @@ footer.footer {
   display: flex !important;
   justify-content: flex-end !important;
   align-items: center !important;
+  float: none !important;
+  margin: 0 !important;
 }
 
 .copyright-bar .payment-methods ul {
@@ -3122,7 +3140,7 @@ footer.footer {
 .copyright-bar .payment-methods ul li {
   display: inline-block !important;
   margin: 0 !important;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease !important;
+  transition: transform 0.25s ease !important;
 }
 
 .copyright-bar .payment-methods ul li:hover {
@@ -3130,24 +3148,30 @@ footer.footer {
 }
 
 .copyright-bar .payment-methods ul li img {
-  height: 34px !important;
+  height: 32px !important;
   width: auto !important;
-  max-width: 55px !important;
-  border-radius: 6px !important;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
+  max-width: 52px !important;
+  border-radius: 5px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
   border: 1px solid rgba(255, 255, 255, 0.15) !important;
   object-fit: contain !important;
   display: block !important;
 }
 
+/* Responsive adjustments for Mobile (< 768px) */
 @media (max-width: 768px) {
   .copyright-bar .container {
-    justify-content: center !important;
-    text-align: center !important;
     flex-direction: column !important;
+    gap: 12px !important;
   }
-  .copyright-bar .payment-methods {
+  .copyright-bar .footer-col {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
     justify-content: center !important;
+  }
+  .copyright-bar .footer-col-center {
+    white-space: normal !important;
   }
 }
 .copyright-bar .no-padding {
