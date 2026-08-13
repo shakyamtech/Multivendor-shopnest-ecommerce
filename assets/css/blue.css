@@ -607,3 +607,31 @@ footer .copyright-bar a {
 .btn-primary:hover, .btn-primary:focus {
   background: linear-gradient(135deg, #A58D66 0%, #8E7752 100%) !important;
 }
+
+/* Categories Dropdown Head & Left Curved Accent (Replace old neon yellow #fdd922) */
+.sidebar .side-menu .head,
+.side-menu .head {
+  background-color: #A58D66 !important;
+  background: linear-gradient(135deg, #A58D66 0%, #8E7752 100%) !important;
+  color: #FFFFFF !important;
+  border-radius: 12px 12px 0 0 !important;
+}
+
+.sidebar .side-menu .head .icon,
+.side-menu .head .icon,
+.sidebar .side-menu .head i {
+  color: #FFFFFF !important;
+}
+
+/* Remove leftover bright yellow left nav curve */
+.header-style-1 .header-nav {
+  background: #0D4860 !important;
+  border-radius: 0px !important;
+}
+
+.header-style-1 .header-nav:before,
+.header-style-1 .header-nav:after {
+  background: #0D4860 !important;
+}
+
+
