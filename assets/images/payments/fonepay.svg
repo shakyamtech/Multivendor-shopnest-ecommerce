@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" width="120" height="80">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="fonepayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E53935"/>
+      <stop offset="100%" stop-color="#C62828"/>
+    </linearGradient>
+  </defs>
+  <!-- Card Base -->
+  <rect x="2" y="2" width="116" height="76" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadow)"/>
+  
+  <!-- Fonepay Badge -->
+  <rect x="12" y="22" width="36" height="36" rx="8" fill="url(#fonepayGrad)"/>
+  <text x="30" y="46" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="18" fill="#FFFFFF" text-anchor="middle">f</text>
+  
+  <!-- Text Branding -->
+  <text x="53" y="44" font-family="'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="15" fill="#E53935">fonepay</text>
+  <text x="53" y="54" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="7.5" fill="#4A5568" letter-spacing="0.5">DIRECT QR</text>
+</svg>

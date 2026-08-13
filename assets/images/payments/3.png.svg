@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" width="120" height="80">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="bankGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F4C81"/>
+      <stop offset="100%" stop-color="#092C4D"/>
+    </linearGradient>
+  </defs>
+  <!-- Card Base -->
+  <rect x="2" y="2" width="116" height="76" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadow)"/>
+  
+  <!-- Bank Pillar Icon Badge -->
+  <rect x="12" y="22" width="36" height="36" rx="8" fill="url(#bankGrad)"/>
+  <!-- Bank Icon (Roof, Pillars, Base) -->
+  <polygon points="30,28 20,34 40,34" fill="#F6AD55"/>
+  <rect x="22" y="36" width="3" height="10" fill="#FFFFFF"/>
+  <rect x="28" y="36" width="3" height="10" fill="#FFFFFF"/>
+  <rect x="35" y="36" width="3" height="10" fill="#FFFFFF"/>
+  <rect x="19" y="47" width="22" height="3" rx="1" fill="#F6AD55"/>
+  
+  <!-- Text Branding -->
+  <text x="53" y="39" font-family="'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="12" fill="#0F4C81">BANK</text>
+  <text x="53" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="12" fill="#2B6CB0">TRANSFER</text>
+</svg>

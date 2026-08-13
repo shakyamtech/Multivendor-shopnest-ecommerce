@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" width="120" height="80">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="khaltiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5C2D91"/>
+      <stop offset="100%" stop-color="#4A2078"/>
+    </linearGradient>
+  </defs>
+  <!-- Card Base -->
+  <rect x="2" y="2" width="116" height="76" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadow)"/>
+  
+  <!-- Khalti Logo Badge -->
+  <rect x="12" y="22" width="36" height="36" rx="8" fill="url(#khaltiGrad)"/>
+  <!-- Wallet / Origami Bird Icon -->
+  <path d="M 22 34 L 32 28 L 38 36 L 28 42 Z" fill="#FFC107"/>
+  <path d="M 28 42 L 38 36 L 34 46 Z" fill="#E0A800"/>
+  <circle cx="27" cy="35" r="2.5" fill="#FFFFFF"/>
+  
+  <!-- Text Branding -->
+  <text x="54" y="44" font-family="'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="17" fill="#5C2D91">Khalti</text>
+  <text x="54" y="55" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="8" fill="#FFC107" letter-spacing="0.5">PAYMENT</text>
+</svg>

@@ -3003,12 +3003,30 @@ font-family: FontAwesome;
 .copyright-bar .payment-methods {
   text-align: right;
 }
+.copyright-bar .payment-methods ul {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .copyright-bar .payment-methods ul li {
   display: inline-block;
-  margin-right: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.copyright-bar .payment-methods ul li:last-child {
-  margin-right: 0px;
+.copyright-bar .payment-methods ul li:hover {
+  transform: translateY(-2px) scale(1.06);
+}
+.copyright-bar .payment-methods ul li img {
+  height: 32px;
+  width: auto;
+  max-width: 52px;
+  border-radius: 4px;
+  object-fit: contain;
+  display: block;
 }
 .copyright-bar .no-padding {
   padding: 0px;

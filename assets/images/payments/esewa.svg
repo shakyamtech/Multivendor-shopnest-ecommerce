@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" width="120" height="80">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="esewaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60BB46"/>
+      <stop offset="100%" stop-color="#449D27"/>
+    </linearGradient>
+  </defs>
+  <!-- Card Base -->
+  <rect x="2" y="2" width="116" height="76" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadow)"/>
+  
+  <!-- eSewa Icon Badge -->
+  <rect x="12" y="22" width="36" height="36" rx="8" fill="url(#esewaGrad)"/>
+  <text x="30" y="47" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="24" fill="#FFFFFF" text-anchor="middle">e</text>
+  
+  <!-- Text Branding -->
+  <text x="54" y="44" font-family="'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="18" fill="#2D3748">Sewa</text>
+  <text x="54" y="55" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="8" fill="#60BB46" letter-spacing="0.5">DIGITAL WALLET</text>
+</svg>
