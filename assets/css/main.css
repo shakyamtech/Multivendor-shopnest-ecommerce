@@ -2437,8 +2437,239 @@ header{
 
   line-height: 24px;
 }
-#owl-main .full-width-slider {
-  margin-bottom: 30px;
+/* ===================================================================
+   DAMMI LOGIN & SIGN UP ULTIMATE SPECIFICITY OVERRIDE
+   =================================================================== */
+body .body-content .sign-in-page .sign-in-card,
+body .body-content .sign-in-page .create-account-card {
+  background: #FFFFFF !important;
+  border-radius: 20px !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08), 0 5px 15px rgba(0, 0, 0, 0.04) !important;
+  padding: 40px !important;
+  border: 1px solid #E2E8F0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+  margin-bottom: 30px !important;
+}
+
+body .body-content .sign-in-page .sign-in-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 5px !important;
+  background: linear-gradient(90deg, #1877F2 0%, #38BDF8 100%) !important;
+}
+
+body .body-content .sign-in-page .create-account-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 5px !important;
+  background: linear-gradient(90deg, #10B981 0%, #38BDF8 100%) !important;
+}
+
+body .body-content .sign-in-page .sign-in-card h4,
+body .body-content .sign-in-page .create-account-card h4 {
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  color: #0F172A !important;
+  margin: 0 0 6px 0 !important;
+}
+
+body .body-content .sign-in-page .sign-in-card p.subtitle,
+body .body-content .sign-in-page .create-account-card p.subtitle {
+  font-size: 14px !important;
+  color: #64748B !important;
+  margin-bottom: 24px !important;
+}
+
+/* Social Buttons */
+body .body-content .sign-in-page .social-auth-buttons {
+  display: flex !important;
+  gap: 12px !important;
+  margin-bottom: 24px !important;
+}
+
+body .body-content .sign-in-page a.btn-social-auth {
+  flex: 1 1 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  padding: 12px 16px !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  border: 1.5px solid #CBD5E1 !important;
+  background: #F8FAFC !important;
+  color: #1E293B !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02) !important;
+  transition: all 0.25s ease !important;
+}
+
+body .body-content .sign-in-page a.btn-social-auth:hover {
+  background: #FFFFFF !important;
+  border-color: #0284C7 !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.15) !important;
+  color: #0284C7 !important;
+  transform: translateY(-2px) !important;
+}
+
+body .body-content .sign-in-page .auth-divider {
+  display: flex !important;
+  align-items: center !important;
+  text-align: center !important;
+  color: #94A3B8 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  margin: 24px 0 !important;
+}
+
+body .body-content .sign-in-page .auth-divider::before,
+body .body-content .sign-in-page .auth-divider::after {
+  content: '' !important;
+  flex: 1 !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+
+body .body-content .sign-in-page .auth-divider span {
+  padding: 0 14px !important;
+}
+
+/* Inputs */
+body .body-content .sign-in-page .custom-input-group {
+  position: relative !important;
+  margin-bottom: 22px !important;
+  clear: both !important;
+}
+
+body .body-content .sign-in-page .custom-input-group label {
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  color: #334155 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+body .body-content .sign-in-page .custom-input-group label span {
+  color: #EF4444 !important;
+}
+
+body .body-content .sign-in-page .input-with-icon {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+body .body-content .sign-in-page .input-with-icon svg.input-icon {
+  position: absolute !important;
+  left: 14px !important;
+  top: 15px !important;
+  fill: #64748B !important;
+  pointer-events: none !important;
+  z-index: 20 !important;
+}
+
+body .body-content .sign-in-page .input-with-icon input,
+body .body-content .sign-in-page .input-with-icon input[type="text"],
+body .body-content .sign-in-page .input-with-icon input[type="email"],
+body .body-content .sign-in-page .input-with-icon input[type="password"],
+body .body-content .sign-in-page .input-with-icon input[type="tel"] {
+  width: 100% !important;
+  height: 48px !important;
+  padding: 10px 48px 10px 44px !important;
+  border-radius: 12px !important;
+  border: 1.5px solid #CBD5E1 !important;
+  font-size: 14px !important;
+  color: #0F172A !important;
+  background: #FFFFFF !important;
+  box-shadow: none !important;
+  outline: none !important;
+  display: block !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  transition: all 0.25s ease !important;
+}
+
+body .body-content .sign-in-page .input-with-icon input:focus {
+  border-color: #0284C7 !important;
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15) !important;
+}
+
+body .body-content .sign-in-page .toggle-password-btn {
+  position: absolute !important;
+  right: 12px !important;
+  top: 10px !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  color: #64748B !important;
+  padding: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  z-index: 20 !important;
+  outline: none !important;
+}
+
+body .body-content .sign-in-page .btn-auth-primary {
+  width: 100% !important;
+  height: 50px !important;
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35) !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin-top: 15px !important;
+}
+
+body .body-content .sign-in-page .btn-auth-primary:hover {
+  background: linear-gradient(135deg, #0369A1 0%, #075985 100%) !important;
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.5) !important;
+  transform: translateY(-2px) !important;
+}
+
+body .body-content .sign-in-page .form-meta-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 20px !important;
+  font-size: 13.5px !important;
+}
+
+body .body-content .sign-in-page .form-meta-row label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #475569 !important;
+  cursor: pointer !important;
+  margin: 0 !important;
+  font-weight: 500 !important;
+}
+
+body .body-content .sign-in-page .form-meta-row a.forgot-link {
+  color: #0284C7 !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+.sign-in-page .form-meta-row a.forgot-link:hover {
+  text-decoration: underline !important;
 }
 #owl-main .full-width-slider .item {
   background-color: #FFFFFF;
