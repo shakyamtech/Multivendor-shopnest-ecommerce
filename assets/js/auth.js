@@ -68,50 +68,42 @@
 
   // ─── Update Navbar: Login/Logout + Greeting ────────────────────────────
   function updateNavbar() {
-    // Top bar login link(s) — update all elements with class or id
-    var loginLinks = document.querySelectorAll('.nav-login-link, a[href="sign-in.html"]');
+    var loginLi   = document.querySelector('li.login');
+    var loginSpan = document.querySelector('li.login a span');
+    var loginA    = document.querySelector('li.login a');
+    var myAccSpan = document.querySelector('li.myaccount a span');
 
     if (isLoggedIn()) {
       var user = getUser();
 
-      // Replace "Login" links with greeting + logout
-      loginLinks.forEach(function (el) {
-        // Only replace if it looks like a plain login link
-        if (el.textContent.trim().toLowerCase() === 'login' ||
-            el.textContent.trim().toLowerCase() === 'log in') {
-          el.textContent = 'Hi, ' + user;
-          el.href = '#';
-          el.style.fontWeight = '700';
-          el.style.color = '#E2C48C';
-        }
-      });
+      // Update "Login" → "Hi, Name"
+      if (loginSpan) loginSpan.textContent = 'Hi, ' + user + ' 👤';
+      if (loginA)    { loginA.href = '#'; loginA.style.color = '#E2C48C'; loginA.style.fontWeight = '700'; }
 
-      // Inject logout button into top bar if not already there
-      if (!document.getElementById('shopnest-logout-btn')) {
-        var topAccountUl = document.querySelector('.top-bar .cnt-account ul');
-        if (topAccountUl) {
-          var li = document.createElement('li');
-          li.innerHTML = '<a href="#" id="shopnest-logout-btn" style="color:rgba(255,255,255,0.85); font-weight:600;">Logout</a>';
-          topAccountUl.appendChild(li);
-          document.getElementById('shopnest-logout-btn').addEventListener('click', function (e) {
-            e.preventDefault();
-            logout();
-          });
-        }
+      // Update "My Account" → show username
+      if (myAccSpan) myAccSpan.textContent = user;
+
+      // Add Logout li after login li
+      if (loginLi && !document.getElementById('shopnest-logout-li')) {
+        var logoutLi = document.createElement('li');
+        logoutLi.id = 'shopnest-logout-li';
+        logoutLi.innerHTML = '<a href="#" id="shopnest-logout-btn" style="color:rgba(255,255,255,0.85); font-weight:600;">Logout</a>';
+        loginLi.parentNode.insertBefore(logoutLi, loginLi.nextSibling);
+        document.getElementById('shopnest-logout-btn').addEventListener('click', function (e) {
+          e.preventDefault();
+          logout();
+        });
       }
-
-      // Inject greeting in top bar if there's a "My Account" link
-      var myAccountLinks = document.querySelectorAll('a[href*="my-account"], .nav-myaccount');
-      myAccountLinks.forEach(function (el) {
-        el.textContent = '👤 ' + user;
-      });
 
     } else {
-      // User is not logged in — show Logout if it somehow exists, remove it
-      var logoutBtn = document.getElementById('shopnest-logout-btn');
-      if (logoutBtn && logoutBtn.parentNode) {
-        logoutBtn.parentNode.removeChild(logoutBtn);
-      }
+      // Ensure Login text is correct for guests
+      if (loginSpan) loginSpan.textContent = 'Login';
+      if (loginA)    loginA.href = 'sign-in.html';
+      if (myAccSpan) myAccSpan.textContent = 'My Account';
+
+      // Remove logout if somehow there
+      var logoutLi = document.getElementById('shopnest-logout-li');
+      if (logoutLi && logoutLi.parentNode) logoutLi.parentNode.removeChild(logoutLi);
     }
   }
 
