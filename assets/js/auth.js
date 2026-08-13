@@ -90,19 +90,6 @@
       if (loginSpan) loginSpan.textContent = 'Hi, ' + user + ' 👤';
       if (loginA)    { loginA.href = '#'; loginA.style.color = '#E2C48C'; loginA.style.fontWeight = '700'; }
 
-      // Add Logout li after login li
-      if (loginLi && !document.getElementById('shopnest-logout-li')) {
-        var logoutLi = document.createElement('li');
-        logoutLi.id = 'shopnest-logout-li';
-        logoutLi.innerHTML = '<a href="#" id="shopnest-logout-btn" style="color:rgba(255,255,255,0.85); font-weight:600;">Logout</a>';
-        loginLi.parentNode.insertBefore(logoutLi, loginLi.nextSibling);
-        document.getElementById('shopnest-logout-btn').addEventListener('click', function (e) {
-          e.preventDefault();
-          showToast('Logged out successfully. See you soon! 👋', 'info');
-          setTimeout(logout, 1200);
-        });
-      }
-
       // Build My Account dropdown
       if (myAccLi && !document.getElementById('shopnest-acc-dropdown')) {
         myAccLi.style.position = 'relative';
