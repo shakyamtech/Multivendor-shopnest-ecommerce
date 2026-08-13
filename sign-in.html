@@ -629,9 +629,9 @@
 	<div class="container">
 		<div class="sign-in-page" style="padding: 40px 0 60px;">
 			<div class="row">
-				<!-- Centered Sign-in Card -->			
-				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-					<div class="sign-in-card" style="background:#ffffff; border-radius:20px; box-shadow:0 20px 45px rgba(0,0,0,0.08), 0 5px 15px rgba(0,0,0,0.04); padding:40px; border:1px solid #E2E8F0; position:relative; overflow:hidden; margin-bottom:30px;">
+				<!-- Centered Sign-in Card matching modal width -->			
+				<div class="col-md-12">
+					<div class="sign-in-card" style="background:#ffffff; border-radius:20px; box-shadow:0 20px 45px rgba(0,0,0,0.08), 0 5px 15px rgba(0,0,0,0.04); padding:35px 36px; border:1px solid #E2E8F0; position:relative; overflow:hidden; margin:0 auto 30px; max-width:500px;">
 						<div style="position:absolute; top:0; left:0; right:0; height:5px; background:linear-gradient(90deg, #1877F2 0%, #38BDF8 100%);"></div>
 						<h4 style="font-family:'Open Sans',sans-serif; font-size:24px; font-weight:800; color:#0F172A; margin:0 0 6px 0;">Welcome Back</h4>
 						<p style="font-size:14px; color:#64748B; margin-bottom:24px;">Log in to manage your Shopnest orders and account.</p>
@@ -714,19 +714,19 @@
 
 		<!-- Create New Account Modal -->
 		<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-md" role="document" style="margin-top:60px;">
+			<div class="modal-dialog" role="document" style="margin:60px auto; max-width:500px; width:92%;">
 				<div class="modal-content" style="border-radius:20px; border:none; overflow:hidden; box-shadow:0 25px 60px rgba(0,0,0,0.25);">
-					<div style="height:6px; background:linear-gradient(90deg, #10B981 0%, #38BDF8 100%);"></div>
+					<div style="height:5px; background:linear-gradient(90deg, #10B981 0%, #38BDF8 100%);"></div>
 					
-					<div class="modal-header" style="border-bottom:1px solid #F1F5F9; padding:24px 30px 16px; position:relative;">
+					<div class="modal-header" style="border-bottom:1px solid #F1F5F9; padding:28px 36px 16px; position:relative;">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position:absolute; right:24px; top:20px; font-size:28px; opacity:0.5; outline:none; border:none; background:none;">
 							<span aria-hidden="true">&times;</span>
 						</button>
-						<h4 class="modal-title" id="registerModalLabel" style="font-family:'Open Sans',sans-serif; font-size:22px; font-weight:800; color:#0F172A; margin:0;">Create New Account</h4>
-						<p style="font-size:13.5px; color:#64748B; margin:4px 0 0 0;">Join Shopnest for exclusive discounts and fast checkout.</p>
+						<h4 class="modal-title" id="registerModalLabel" style="font-family:'Open Sans',sans-serif; font-size:24px; font-weight:800; color:#0F172A; margin:0;">Create New Account</h4>
+						<p style="font-size:14px; color:#64748B; margin:4px 0 0 0;">Join Shopnest for exclusive discounts and fast checkout.</p>
 					</div>
 					
-					<div class="modal-body" style="padding:24px 30px 30px;">
+					<div class="modal-body" style="padding:24px 36px 35px;">
 						<form role="form" onsubmit="handleRegister(event)">
 							<div style="margin-bottom:18px; position:relative; clear:both;">
 								<label for="modalSignupName" style="font-size:13px; font-weight:700; color:#334155; margin-bottom:6px; display:block;">Full Name <span style="color:#EF4444;">*</span></label>
