@@ -482,3 +482,128 @@ left:0px
   color: #0f6cb2;
 }
 
+/* ===================================================================
+   LUXURY SOHO COLOR PALETTE THEME OVERRIDES
+   Navy: #083A4F | Gold: #A58D66 | Aqua: #C0D5D6 | Teal: #407E8C | Sand: #E5E1DD
+   =================================================================== */
+
+/* Primary Header & Top Bar */
+.top-bar {
+  background: #052735 !important;
+}
+
+.main-header {
+  background: #083A4F !important;
+}
+
+.header-style-1 .header-nav {
+  background: #0D4860 !important;
+  border-top: 1px solid rgba(165, 141, 102, 0.25) !important;
+}
+
+.cnt-home .header-style-1.header-style-2 .header-nav .navbar .navbar-nav > li.active,
+.cnt-homepage .header-style-1.header-style-2 .header-nav .navbar .navbar-nav > li.active,
+.header-nav .navbar-default .navbar-collapse .navbar-nav > li.active > a,
+.header-nav .navbar-default .navbar-collapse .navbar-nav > li:hover > a {
+  background: #407E8C !important;
+  color: #FFFFFF !important;
+}
+
+/* Logo & Branding */
+.logo a span, .logo a {
+  color: #FFFFFF !important;
+}
+
+/* Search Area & Search Button */
+.main-header .top-search-holder .search-area .search-button {
+  background: #A58D66 !important;
+  color: #FFFFFF !important;
+  border-color: #A58D66 !important;
+}
+.main-header .top-search-holder .search-area .search-button:hover {
+  background: #8E7752 !important;
+}
+
+.main-header .top-search-holder .search-area .categories-filter {
+  border-right: 1px solid #E5E1DD !important;
+}
+
+/* Shopping Cart Basket */
+.top-cart-row .dropdown-cart .lnk-cart {
+  background: #A58D66 !important;
+  border-color: #A58D66 !important;
+}
+.top-cart-row .dropdown-cart .lnk-cart:hover {
+  background: #8E7752 !important;
+}
+
+/* Navbar Labels (HOT & NEW) */
+.header-nav .navbar-nav > li > a .lbl {
+  background: #A58D66 !important;
+}
+.header-nav .navbar-nav > li > a .lbl.new {
+  background: #407E8C !important;
+}
+
+/* General Body & Canvas Backdrop */
+body, .body-content {
+  background-color: #F6F4F0 !important;
+}
+
+/* Links & Text Highlights */
+a {
+  color: #407E8C;
+}
+a:hover, a:focus {
+  color: #A58D66;
+}
+
+/* Price Tags & Accents */
+.product-info .price-container .price,
+.product .product-info .price,
+.price-box .price {
+  color: #083A4F !important;
+  font-weight: 800;
+}
+
+/* Category Sidebar & Badges */
+.sidebar .sidebar-module-container .sidebar-title {
+  border-bottom: 2px solid #A58D66 !important;
+}
+
+/* Footer Colors */
+footer {
+  background: #083A4F !important;
+  color: #E5E1DD !important;
+}
+footer .footer-bottom {
+  background: #052230 !important;
+  border-top: 1px solid rgba(165, 141, 102, 0.2) !important;
+}
+footer h4, footer .module-heading .module-title {
+  color: #A58D66 !important;
+}
+footer .module-body ul.toggle-footer li a,
+footer a {
+  color: #C0D5D6 !important;
+}
+footer a:hover {
+  color: #A58D66 !important;
+}
+footer .copyright-bar {
+  color: #C0D5D6 !important;
+}
+footer .copyright-bar a {
+  color: #A58D66 !important;
+  font-weight: 700;
+}
+
+/* Primary Buttons */
+.btn-primary, .btn-upper, .btn-auth-primary {
+  background: linear-gradient(135deg, #407E8C 0%, #083A4F 100%) !important;
+  border: none !important;
+  color: #FFFFFF !important;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background: linear-gradient(135deg, #A58D66 0%, #8E7752 100%) !important;
+}
