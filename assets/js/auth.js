@@ -106,9 +106,8 @@
       // Build My Account dropdown
       if (myAccLi && !document.getElementById('shopnest-acc-dropdown')) {
         myAccLi.style.position = 'relative';
-        if (myAccSpan) myAccSpan.textContent = user;
+        // Keep "My Account" text — don't replace with username (shown in Hi greeting already)
         if (myAccA) {
-          myAccA.style.color = '#FFFFFF';
           myAccA.style.cursor = 'pointer';
         }
 
