@@ -3072,6 +3072,22 @@ footer.footer {
   transition: all 0.3s ease !important;
 }
 
+.copyright-bar .footer-col-left ul.link li a:before,
+.copyright-bar .footer-col-left ul.link li a:after {
+  content: none !important;
+  display: none !important;
+}
+
+.copyright-bar .footer-col-left ul.link li a svg {
+  display: inline-block !important;
+  width: 18px !important;
+  height: 18px !important;
+  fill: #FFFFFF !important;
+  position: relative !important;
+  z-index: 2 !important;
+  transition: transform 0.25s ease !important;
+}
+
 .copyright-bar .footer-col-left ul.link li a:hover {
   transform: translateY(-3px) scale(1.1) !important;
 }
