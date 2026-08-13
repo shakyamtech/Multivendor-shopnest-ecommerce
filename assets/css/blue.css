@@ -634,4 +634,85 @@ footer .copyright-bar a {
   background: #0D4860 !important;
 }
 
+/* ===================================================================
+   COMPLETE NEON YELLOW (#fdd922) ELIMINATION — SOHO PALETTE OVERRIDES
+   =================================================================== */
 
+/* 1. Top-level header{} background */
+header {
+  background: #083A4F !important;
+}
+
+/* 2. Search Button */
+.main-header .top-search-holder .search-area .search-button {
+  background-color: #A58D66 !important;
+  background: #A58D66 !important;
+}
+.main-header .top-search-holder .search-area .search-button:after {
+  color: #FFFFFF !important;
+}
+
+/* 3. Cart item count badge */
+.top-cart-row .dropdown-cart .lnk-cart .items-cart-inner .basket-item-count {
+  background: #407E8C !important;
+  color: #FFFFFF !important;
+}
+
+/* 4. Sale tag */
+.tag.sale {
+  background: #407E8C !important;
+  color: #FFFFFF !important;
+}
+
+/* 5. Product card — Add to Cart icon button */
+.product .cart .action ul li.add-cart-button .btn.btn-primary.icon {
+  background: #407E8C !important;
+  color: #FFFFFF !important;
+}
+
+/* 6. Cart action add-cart button (alternative selector) */
+.cart .action .add-cart-button .btn.btn-primary.icon {
+  background: #407E8C !important;
+  color: #FFFFFF !important;
+}
+
+/* 7. Single product page — Add to Cart btn */
+.single-product .add-btn .btn-primary {
+  background-color: #407E8C !important;
+  background: linear-gradient(135deg, #407E8C 0%, #083A4F 100%) !important;
+  color: #FFFFFF !important;
+}
+
+/* 8. Checkout button (standalone) */
+.checkout-btn {
+  background: #407E8C !important;
+  color: #FFFFFF !important;
+}
+
+/* 9. x-page newsletter/CTA button */
+.body-content .x-page .x-text .le-button {
+  background: #407E8C !important;
+  color: #FFFFFF !important;
+}
+
+/* 10. Shopping cart checkout button (all responsive breakpoint duplicates) */
+.shopping-cart .cart-shopping-total table tbody tr td .cart-checkout-btn button {
+  background: #407E8C !important;
+  color: #FFFFFF !important;
+}
+
+/* 11. Categories head (sidebar) */
+.sidebar .side-menu .head {
+  background-color: #A58D66 !important;
+  color: #FFFFFF !important;
+}
+
+/* 12. HOT/NEW navbar labels */
+.header-nav .navbar-nav > li > a .lbl {
+  background: #A58D66 !important;
+  color: #FFFFFF !important;
+}
+.header-nav .navbar-nav > li > a .lbl.new {
+  background: #407E8C !important;
+  color: #FFFFFF !important;
+}
