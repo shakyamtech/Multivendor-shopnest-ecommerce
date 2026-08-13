@@ -1092,14 +1092,28 @@ function handleRegister(e) {
 function handleLogin(e) {
   e.preventDefault();
   var email = document.getElementById('signinEmail').value || 'User';
+  var password = document.getElementById('signinPassword').value;
+
+  if (!email || !password) {
+    showAuthToast('⚠️ Please enter your email and password.');
+    return;
+  }
+
+  // Show loading state on button
+  var btn = e.target.querySelector('button[type="submit"]');
+  if (btn) {
+    btn.disabled = true;
+    btn.innerHTML = '<span>Logging in...</span>';
+  }
+
   var userName = email.split('@')[0];
   userName = userName.charAt(0).toUpperCase() + userName.slice(1);
-  
-  showAuthToast('Logged in successfully! Welcome back, ' + userName + ' 👋');
+
   localStorage.setItem('shopnest_user', userName);
-  
+  showAuthToast('Logged in successfully! Welcome back, ' + userName + ' 👋');
+
   setTimeout(function() {
-    window.location.href = 'index.html';
+    window.location.href = 'home.html';
   }, 1800);
 }
 
