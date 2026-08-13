@@ -2990,43 +2990,165 @@ font-family: FontAwesome;
   font-size: 12px;
   line-height: 1.7;
 }
+/* ===================================================================
+   MODERN CHITIKKA FOOTER REDESIGN
+   =================================================================== */
+footer.footer {
+  background: linear-gradient(180deg, #111827 0%, #0B0F19 100%) !important;
+  border-top: 3px solid;
+  border-image: linear-gradient(90deg, #60BB46 0%, #5C2D91 50%, #0F4C81 100%) 1;
+  color: #94A3B8;
+}
+
 .copyright-bar {
-  background: #2e353b;
-  padding: 35px 0px;
-  border-top:1px rgba(255,255,255,0.1) solid
+  background: #070A10 !important;
+  padding: 24px 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
+
+.copyright-bar .container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+}
+
+.copyright-bar .social {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.copyright-bar .social ul.link {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.copyright-bar .social ul.link li {
+  margin: 0 !important;
+}
+
+.copyright-bar .social ul.link li a {
+  width: 36px !important;
+  height: 36px !important;
+  line-height: 36px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.copyright-bar .social ul.link li a:hover {
+  transform: translateY(-3px) scale(1.1) !important;
+}
+
+.copyright-bar .social .fb a {
+  background: #1877F2 !important;
+}
+
+.copyright-bar .social .fb a:hover {
+  box-shadow: 0 4px 14px rgba(24, 119, 242, 0.5) !important;
+}
+
+.copyright-bar .social .instagram a {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+}
+
+.copyright-bar .social .instagram a:hover {
+  box-shadow: 0 4px 14px rgba(214, 36, 159, 0.5) !important;
+}
+
+.copyright-bar .social .tiktok a {
+  background: #000000 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='white'%3E%3Cpath d='M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V258.4a92.16 92.16 0 1 0 58.7 86.5V0h69.17a140.39 140.39 0 0 0 13.65 60.13A141.67 141.67 0 0 0 448 109.64z'/%3E%3C/svg%3E") no-repeat center center !important;
+  background-size: 14px 14px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.copyright-bar .social .tiktok a:hover {
+  border-color: #FE2C55 !important;
+  box-shadow: 0 4px 14px rgba(254, 44, 85, 0.5) !important;
+}
+
 .copyright-bar .copyright {
-  color: #72797e;
-  line-height: 28px;
-  text-align:center
+  color: #CBD5E1 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
+  letter-spacing: 0.2px !important;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
+
+.copyright-bar .copyright a {
+  color: #38BDF8 !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  padding: 2px 6px !important;
+  margin-left: 2px !important;
+  border-radius: 4px !important;
+  background: rgba(56, 189, 248, 0.08) !important;
+  border: 1px solid rgba(56, 189, 248, 0.2) !important;
+  transition: all 0.25s ease !important;
+}
+
+.copyright-bar .copyright a:hover {
+  color: #FFFFFF !important;
+  background: #0284C7 !important;
+  border-color: #0284C7 !important;
+  box-shadow: 0 2px 10px rgba(2, 132, 199, 0.4) !important;
+}
+
 .copyright-bar .payment-methods {
-  text-align: right;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
 }
+
 .copyright-bar .payment-methods ul {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
 }
+
 .copyright-bar .payment-methods ul li {
-  display: inline-block;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-block !important;
+  margin: 0 !important;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease !important;
 }
+
 .copyright-bar .payment-methods ul li:hover {
-  transform: translateY(-2px) scale(1.06);
+  transform: translateY(-3px) scale(1.08) !important;
 }
+
 .copyright-bar .payment-methods ul li img {
-  height: 32px;
-  width: auto;
-  max-width: 52px;
-  border-radius: 4px;
-  object-fit: contain;
-  display: block;
+  height: 34px !important;
+  width: auto !important;
+  max-width: 55px !important;
+  border-radius: 6px !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  .copyright-bar .container {
+    justify-content: center !important;
+    text-align: center !important;
+    flex-direction: column !important;
+  }
+  .copyright-bar .payment-methods {
+    justify-content: center !important;
+  }
 }
 .copyright-bar .no-padding {
   padding: 0px;
