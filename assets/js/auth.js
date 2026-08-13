@@ -66,12 +66,22 @@
     }
   }
 
-  // ─── Update Navbar: Login/Logout + Greeting ────────────────────────────
+  // ─── Update Navbar: Login/Logout + Greeting + Dropdowns ───────────────
   function updateNavbar() {
     var loginLi   = document.querySelector('li.login');
     var loginSpan = document.querySelector('li.login a span');
     var loginA    = document.querySelector('li.login a');
+    var myAccLi   = document.querySelector('li.myaccount');
     var myAccSpan = document.querySelector('li.myaccount a span');
+    var myAccA    = document.querySelector('li.myaccount a');
+
+    // Wire up top bar links (always, for all users)
+    var wishlistLi = document.querySelector('li.wishlist a');
+    var cartLi     = document.querySelector('li.header_cart a');
+    var checkLi    = document.querySelector('li.check a');
+    if (wishlistLi) wishlistLi.href = 'my-wishlist.html';
+    if (cartLi)     cartLi.href     = 'shopping-cart.html';
+    if (checkLi)    checkLi.href    = 'checkout.html';
 
     if (isLoggedIn()) {
       var user = getUser();
@@ -79,9 +89,6 @@
       // Update "Login" → "Hi, Name"
       if (loginSpan) loginSpan.textContent = 'Hi, ' + user + ' 👤';
       if (loginA)    { loginA.href = '#'; loginA.style.color = '#E2C48C'; loginA.style.fontWeight = '700'; }
-
-      // Update "My Account" → show username
-      if (myAccSpan) myAccSpan.textContent = user;
 
       // Add Logout li after login li
       if (loginLi && !document.getElementById('shopnest-logout-li')) {
@@ -91,19 +98,104 @@
         loginLi.parentNode.insertBefore(logoutLi, loginLi.nextSibling);
         document.getElementById('shopnest-logout-btn').addEventListener('click', function (e) {
           e.preventDefault();
-          logout();
+          showToast('Logged out successfully. See you soon! 👋', 'info');
+          setTimeout(logout, 1200);
+        });
+      }
+
+      // Build My Account dropdown
+      if (myAccLi && !document.getElementById('shopnest-acc-dropdown')) {
+        myAccLi.style.position = 'relative';
+        if (myAccSpan) myAccSpan.textContent = user;
+        if (myAccA) {
+          myAccA.style.color = '#FFFFFF';
+          myAccA.style.cursor = 'pointer';
+        }
+
+        var dropdown = document.createElement('ul');
+        dropdown.id = 'shopnest-acc-dropdown';
+        dropdown.style.cssText = [
+          'display:none',
+          'position:absolute',
+          'top:100%',
+          'left:0',
+          'background:#FFFFFF',
+          'border-radius:10px',
+          'box-shadow:0 8px 30px rgba(0,0,0,0.15)',
+          'min-width:180px',
+          'list-style:none',
+          'padding:8px 0',
+          'margin:0',
+          'z-index:99999',
+          'border:1px solid #E2E8F0'
+        ].join(';');
+
+        var menuItems = [
+          { icon: '👤', label: 'Profile: ' + user, href: '#',              bold: true },
+          { icon: '❤️', label: 'My Wishlist',       href: 'my-wishlist.html' },
+          { icon: '📦', label: 'Track Orders',      href: 'track-orders.html' },
+          { icon: '🛒', label: 'Shopping Cart',     href: 'shopping-cart.html' },
+          { icon: '🚪', label: 'Logout',            href: '#', id: 'acc-dd-logout' }
+        ];
+
+        menuItems.forEach(function (item) {
+          var li = document.createElement('li');
+          var a  = document.createElement('a');
+          a.href = item.href;
+          if (item.id) a.id = item.id;
+          a.style.cssText = [
+            'display:block',
+            'padding:10px 18px',
+            'color:' + (item.bold ? '#0F172A' : '#334155'),
+            'font-size:13.5px',
+            'font-weight:' + (item.bold ? '700' : '500'),
+            'text-decoration:none',
+            'white-space:nowrap',
+            'transition:background 0.15s'
+          ].join(';');
+          a.innerHTML = '<span style="margin-right:8px;">' + item.icon + '</span>' + item.label;
+          a.addEventListener('mouseenter', function () { this.style.background = '#F1F5F9'; });
+          a.addEventListener('mouseleave', function () { this.style.background = 'transparent'; });
+          if (item.id === 'acc-dd-logout') {
+            a.addEventListener('click', function (e) {
+              e.preventDefault();
+              showToast('Logged out successfully. See you soon! 👋', 'info');
+              setTimeout(logout, 1200);
+            });
+            a.style.color = '#EF4444';
+          }
+          li.appendChild(a);
+          dropdown.appendChild(li);
+        });
+
+        myAccLi.appendChild(dropdown);
+
+        // Toggle dropdown on click
+        myAccA.addEventListener('click', function (e) {
+          e.preventDefault();
+          var dd = document.getElementById('shopnest-acc-dropdown');
+          dd.style.display = dd.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Close on outside click
+        document.addEventListener('click', function (e) {
+          if (!myAccLi.contains(e.target)) {
+            var dd = document.getElementById('shopnest-acc-dropdown');
+            if (dd) dd.style.display = 'none';
+          }
         });
       }
 
     } else {
-      // Ensure Login text is correct for guests
+      // Guest — ensure Login text is correct
       if (loginSpan) loginSpan.textContent = 'Login';
       if (loginA)    loginA.href = 'sign-in.html';
       if (myAccSpan) myAccSpan.textContent = 'My Account';
+      if (myAccA)    myAccA.href = 'sign-in.html';
 
       // Remove logout if somehow there
-      var logoutLi = document.getElementById('shopnest-logout-li');
-      if (logoutLi && logoutLi.parentNode) logoutLi.parentNode.removeChild(logoutLi);
+      var logoutLiEl = document.getElementById('shopnest-logout-li');
+      if (logoutLiEl && logoutLiEl.parentNode) logoutLiEl.parentNode.removeChild(logoutLiEl);
     }
   }
 
